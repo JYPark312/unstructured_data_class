@@ -21,8 +21,6 @@ for news in kor_corpus['contents'].head():
     pos_news = ['/'.join(t[:-1]) for t in pos_tagger.pos(news) if ((t[1]=='Noun') & (t[0] not in stopword))]
 total_news.append(' '.join(pos_news))
 
-total_news
-
 yonhap = kor_corpus['contents']
 
 import gensim
@@ -52,8 +50,6 @@ from gensim.models.doc2vec import TaggedDocument, LabeledSentence
 Td = [LabeledSentence(doc,["doc_1"]) for i,doc in enumerate(doc_list)]
 d2v = Doc2Vec(Td, window = window, min_count=min_count, size = hidden_size, workers = workers, iter = epoch, seed=1, hashfxn=hash32)
 
-Td
 
 d2v.docvecs.most_similar('doc_1', topn=3)
 
-doc_list
