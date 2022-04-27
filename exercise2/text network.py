@@ -160,7 +160,7 @@ nx.degree_centrality(G4)
 
 
 import os
-os.chdir("C:/Users/user/Desktop/PYJ/비정형/3주차")
+
 doc = open('test.txt','r', encoding='utf-8').read()
 doc
 copus = doc.split('.')
@@ -178,7 +178,4 @@ names = cv.get_feature_names() # This are the entity names (i.e. keywords)
 df = pd.DataFrame(data = Co_ocurrence.toarray(), columns = names, index = names)
 df.to_csv('to gephi.csv', sep = ',')
 
-df
-
-per
 
