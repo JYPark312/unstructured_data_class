@@ -17,3 +17,5 @@
   ![image](https://user-images.githubusercontent.com/70933580/165463118-4392b29e-1e09-48e7-8b30-bde49882d6bc.png)
 
   ![image](https://user-images.githubusercontent.com/70933580/165463142-d04c8635-0b50-44d9-a060-e828cf1a5619.png)
+
+- 실제 데이터에 word2vec 과 svd 적용 lsa 모델 적용 시킨 실습
