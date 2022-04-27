@@ -13,12 +13,15 @@
 
 ### Gephi 시각화
 - degree 2-10
+
 ![image](https://user-images.githubusercontent.com/70933580/165447212-38f1735e-b775-45d2-8cf4-75ff6697c957.png)
 
 - degree 2-20
+
 ![image](https://user-images.githubusercontent.com/70933580/165447250-e2e3b746-cfce-4348-a6ec-0b8c325fade8.png)
 
 - degree 2-30
+
 ![image](https://user-images.githubusercontent.com/70933580/165447294-a9eb2f72-8d31-46ec-8a43-44b3a9326b67.png)
 
 - 초기 gephi 사용법 미숙으로 node명 표시 하지 못한 한계점
