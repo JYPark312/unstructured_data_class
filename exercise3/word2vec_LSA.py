@@ -20,7 +20,7 @@ from wordcloud import WordCloud
 from sklearn.feature_extraction.text import TfidfTransformer
 import os
 os.chdir()
-kor_corpus = pd.read_csv('C:/Users/user/Desktop/PYJ/비정형/5주차/news_koreanwave.csv', encoding='utf-8')
+kor_corpus = pd.read_csv('news_koreanwave.csv', encoding='utf-8')
 kor_corpus.head()
 
 len(kor_corpus)
@@ -53,8 +53,10 @@ from nltk import collocations
 from konlpy.tag import Kkma
  
 measures = collocations.BigramAssocMeasures()
-doc = open('C:/Users/user/Desktop/PYJ/비정형/2주차/final_announcement_for_Park.txt', 'r', encoding='utf-8').read()
+doc = open('final_announcement_for_Park.txt', 'r', encoding='utf-8').read()
+
 print('Collocations among tagged words:')
+
 tagged_words = Kkma().pos(doc)
 finder = collocations.BigramCollocationFinder.from_words(tagged_words)
 pprint(finder.nbest(measures.pmi, 10)) # top 10 n-grams with highest PMI
