@@ -4,7 +4,7 @@
 
 - word2vec: class softmax regression을 이용하여 각 단어의 벡터를 학습시키는 classifier
 
--- 기본 개념
+-- 기본개념
 
 ![image](https://user-images.githubusercontent.com/70933580/165459094-6cf61360-e51b-46e0-968d-3499303a3eb8.png)
 
