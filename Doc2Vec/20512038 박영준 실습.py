@@ -11,7 +11,7 @@ import nltk
 from konlpy.tag import Twitter
 import pandas as pd
 
-kor_corpus = pd.read_csv('C:/Users/young/OneDrive/바탕 화면/2021 대학원 1학기/비정형/word2vec/news_koreanwave.csv', encoding='utf-8')
+kor_corpus = pd.read_csv('news_koreanwave.csv', encoding='utf-8')
 len(kor_corpus)
 
 pos_tagger = Twitter()
