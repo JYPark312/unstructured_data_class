@@ -7,16 +7,19 @@ Created on Tue Sep 22 12:12:49 2020
 
 pip install konlpy
 import os
-os.chdir('C:/Users/user/Desktop/PYJ/비정형/2주차')
-doc = open('Son_on_fire.txt','r', encoding='utf-8').read()
 from konlpy.tag import Kkma, Twitter, Hannanum
-kkma=Kkma()
-twitter=Twitter()
-hannanum=Hannanum()
+from pprint import pprint
+
+
+doc = open('Son_on_fire.txt','r', encoding='utf-8').read() #파일 읽어오기
+
+kkma=Kkma() #꼬꼬마
+twitter=Twitter() #트위터
+hannanum=Hannanum() #한나눔
 kkma.pos(doc)
 twitter.pos(doc)
 hannanum.pos(doc)
-from pprint import pprint
+
 
 
 pos_taggers = [('kkma', Kkma()), ('twitter', Twitter()), ('hannanum', Hannanum())]
