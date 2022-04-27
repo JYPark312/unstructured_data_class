@@ -117,36 +117,6 @@ model.fit(partial_x_train,
 results = model.evaluate(x_test, one_hot_test_labels)
 results
 
-import copy
-
-test_labels_copy = copy.copy(test_labels)
-np.random.shuffle(test_labels_copy)
-float(np.sum(np.array(test_labels) == np.array(test_labels_copy))) / len(test_labels)
-
-predictions = model.predict(x_test)
-predictions[0].shape
-predictions[0].shape
-np.argmax(predictions[0])
-y_train = np.array(train_labels)
-y_test = np.array(test_labels)
-
-model.compile(optimizer='rmsprop', loss='sparse_categorical_crossentropy', metrics=['acc'])
-
-model = models.Sequential()
-model.add(layers.Dense(64, activation='relu', input_shape=(10000,)))
-model.add(layers.Dense(4, activation='relu'))
-model.add(layers.Dense(46, activation='softmax'))
-
-model.compile(optimizer='rmsprop',
-              loss='categorical_crossentropy',
-              metrics=['accuracy'])
-model.fit(partial_x_train,
-          partial_y_train,
-          epochs=20,
-          batch_size=128,
-          validation_data=(x_val, y_val))
-
-
 ###########clustering###################
 import konlpy
 from konlpy.tag import Hannanum
@@ -168,6 +138,8 @@ for news in kor_corpus['contents'].head():
     pos_news = ['/'.join(t[:-1]) for t in pos_tagger.pos(news) if ((t[1]=='Noun') & (t[0] not in stopword))]
     total_news.append(' '.join(pos_news))
 total_news
+
+
 from sklearn.feature_extraction.text import CountVectorizer
 
 kor_vectorizer = CountVectorizer(min_df=1) # 등장하는 단어들에 대한 오브젝트
@@ -187,6 +159,7 @@ tfidf.toarray()
 
 
 yonhap = kor_corpus['contents']
+
 import re
 
 total_news = []
@@ -204,6 +177,8 @@ cosine_similarity(kor_bow[0], kor_bow)
 (-cosine_similarity(kor_bow[0], kor_bow)).argsort()
 idx = (-cosine_similarity(kor_bow[0], kor_bow)[0]).argsort()
 print(idx)
+
+
 def find_most_similar_news(index, bow, corpus):
     idx = (-cosine_similarity(bow[index], bow)[0]).argsort()[1]
     return corpus[idx]
@@ -226,9 +201,10 @@ kmeans = KMeans(n_clusters=5, n_init=50, verbose=1)
 kmeans.fit(tfidf)
 kmeans.labels_
 
-
 import numpy as np
+
 clusters = []
+
 for i in range(0, kmeans.n_clusters):
     clusters.append(np.where(kmeans.labels_ == i))
 clusters
