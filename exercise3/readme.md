@@ -13,6 +13,7 @@
   - BoW에 기반한 DTM이나 TF-IDF는 기본적으로 단어의 빈도 수를 이용한 수치화 방법이기 때문에 단어의 의미를 고려하지 못함
   - 위의 문제를 해결하기 위해 DTM에 SVD(singular value decomposition)을 적용한 LSA가 개발 
   - SVD: A가 m x n 행렬일 때, 다음 아래의 3개 행렬의 곱으로 분해되는 기법
+  
   ![image](https://user-images.githubusercontent.com/70933580/165463118-4392b29e-1e09-48e7-8b30-bde49882d6bc.png)
 
   ![image](https://user-images.githubusercontent.com/70933580/165463142-d04c8635-0b50-44d9-a060-e828cf1a5619.png)
